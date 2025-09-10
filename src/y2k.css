@@ -1,0 +1,49 @@
+/* Estilos para la calculadora */
+.calculator-button {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 0;
+  margin: 2px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reducir el espaciado entre columnas */
+.calculator-row {
+  margin: 2px 0;
+}
+
+.calculator-row .col {
+  padding: 0 2px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para el contenedor de la calculadora */
+.calculator-container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Estilo para el display del resultado */
+.calculator-display {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

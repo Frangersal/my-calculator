@@ -1,0 +1,129 @@
+/* Neumorphism para la calculadora */
+:root{
+  --bg-0: #e7e1d6; /* fondo general beige claro */
+  --surface: #e0e0e0; /* superficie principal - solicitado */
+  --shadow-dark: rgba(190,190,190,0.55);
+  --shadow-light: rgba(255,255,255,0.9);
+  --accent: #dfd4bf;
+  --text: #3a332d; /* texto oscuro pero cálido */
+}
+
+/* Box sizing global */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+body{
+  background: linear-gradient(180deg, #f0f4f7 0%, var(--bg-0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Contenedor principal: superficie elevada con doble sombra (neumorphism) */
+.calculator-container{
+  position: relative;
+  max-width: min(320px, calc(100vw - 24px));
+  margin: 0 auto;
+  padding: 18px;
+  border-radius: 30px; /* pedido */
+  background: #e0e0e0; /* pedido */
+  /* sombra estilo neumorphism más marcada y beige */
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+/* Display: aspecto hundido (inset) */
+.calculator-container h1{
+  margin: 0 0 12px;
+  text-align: center;
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Hover/Active: asegurar color consistente y efectos internos */
+.calculator-button:hover{
+  /* efecto de pulsación ligero en hover */
+  box-shadow: inset 4px 4px 10px rgba(163,177,198,0.36), inset -4px -4px 10px rgba(255,255,255,0.9);
+  color: var(--text) !important;
+}
+.calculator-button:focus{
+  color: var(--text) !important;
+}
+.calculator-button:active{
+  /* efecto más marcado en active */
+  box-shadow: inset 6px 6px 16px rgba(120,110,95,0.36), inset -6px -6px 16px rgba(255,255,255,0.92);
+  color: var(--text) !important;
+}
+
+.calculator-button.btn-warning:hover,
+.calculator-button.btn-warning:active,
+.calculator-button.btn-warning:focus {
+  color: #2a2a2a !important;
+}
+.calculator-display{
+  border-radius: 20px; /* solicitado */
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: right;
+  min-height: 56px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  /* aspecto inset pedido */
+  background: #e0e0e0;
+  box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+  color: var(--text);
+}
+
+/* Filas y columnas: usamos flex para mantener 4 botones por fila en escritorio */
+.calculator-row{ display:flex; flex-wrap:nowrap; margin:6px 0; align-items:center; }
+.calculator-row .col{ flex:0 0 25%; max-width:25%; padding:0 6px; display:flex; justify-content:center; }
+
+/* Botones: forma elevada con sombra y pequeño relief interno en active */
+.calculator-button{
+  width:60px; height:60px; min-width:60px; min-height:60px;
+  padding:0; margin:2px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; font-weight:800; color: var(--text);
+  background: linear-gradient(180deg, #efe7da, #e6dbbf); /* tonos beige */
+  border: none;
+  box-shadow: 6px 6px 18px rgba(170,155,135,0.36), -6px -6px 18px rgba(255,255,255,0.9);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.calculator-button.btn-warning{
+  background: linear-gradient(180deg, #f6e1c2, #f0d29a); /* botón cálido beige */
+  box-shadow: 6px 6px 18px rgba(190,145,90,0.26), -6px -6px 18px rgba(255,255,255,0.9);
+  color: #2a2a2a;
+}
+
+.calculator-button:hover{ /* usar efecto de click como hover (sombra interna más sutil) */
+  box-shadow: inset 4px 4px 10px rgba(163,177,198,0.36), inset -4px -4px 10px rgba(255,255,255,0.9);
+}
+.calculator-button:active{ /* usar efecto de hover previo como efecto de click (más marcado) */
+  box-shadow: inset 6px 6px 16px rgba(120,110,95,0.36), inset -6px -6px 16px rgba(255,255,255,0.92);
+}
+
+/* pequeña señal visual en el display cuando hay overflow de texto */
+.calculator-display span{ max-width:100%; overflow:hidden; text-overflow:ellipsis; }
+
+/* Responsive: permitir wrap en móviles y reducir botones */
+@media (max-width:420px){
+  .calculator-container{ max-width:94%; padding:12px; }
+  .calculator-row{ flex-wrap:wrap; }
+  .calculator-row .col{ flex:0 0 25%; max-width:25%; padding:4px; }
+  .calculator-button{ width:56px; height:56px; min-width:56px; min-height:56px; font-size:18px }
+  .calculator-display{ min-height:46px; font-size:18px }
+}
+
+@media (max-width:360px){
+  .calculator-row .col{ flex:0 0 50%; max-width:50%; }
+  .calculator-button{ width:52px; height:52px; min-width:52px; min-height:52px; font-size:17px }
+  .calculator-display{ min-height:44px; font-size:16px }
+}
