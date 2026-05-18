@@ -1,55 +1,86 @@
-```markdown
 # 🧮 My Calculator
 
-Una aplicación de calculadora web moderna, intuitiva y responsiva. Este proyecto ha sido desarrollado enfocándose en la simplicidad y la eficiencia, ofreciendo una interfaz limpia para realizar operaciones aritméticas con rapidez.
+<p align="center">
+  <b>Aplicación web moderna, intuitiva y responsiva para realizar operaciones aritméticas básicas.</b>
+</p>
 
-## 🚀 Enlace de Deploy
-Puedes ver la aplicación en funcionamiento aquí:  
+<p align="center">
+  <a href="https://my-calculadora-fgsm.netlify.app/">
+    <img src="https://img.shields.io/badge/Deploy-Netlify-00ADB5?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Deploy">
+  </a>
+</p>
+
+---
+
+## 🚀 Enlace del Proyecto
+La aplicación se encuentra totalmente desplegada y lista para ser utilizada en producción a través del siguiente enlace:
+
 👉 **[Visitar My Calculator](https://my-calculadora-fgsm.netlify.app/)**
 
-## 📝 Descripción
-**My Calculator** es una herramienta web funcional que permite a los usuarios realizar cálculos matemáticos básicos de manera sencilla. Diseñada con un enfoque "mobile-first", la aplicación se adapta perfectamente a cualquier tamaño de pantalla, garantizando una experiencia de usuario óptima tanto en dispositivos móviles como en ordenadores de escritorio.
+---
 
-## ✨ Características
-* **Operaciones Aritméticas:** Suma, resta, multiplicación y división.
-* **Interfaz Responsiva:** Diseño fluido que se ajusta a móviles, tablets y PCs.
-* **Estética Moderna:** Interfaz minimalista y estilizada con Tailwind CSS.
-* **Gestión de Estados:** Manejo eficiente de la lógica de cálculo y visualización de resultados en tiempo real.
+## 📝 Descripción
+**My Calculator** es una herramienta web funcional que permite a los usuarios realizar cálculos matemáticos básicos de manera sencilla y eficiente. Desarrollada con un enfoque "mobile-first", la interfaz ha sido optimizada para garantizar una experiencia limpia, rápida y fluida, adaptándose sin problemas a cualquier tamaño de pantalla.
+
+### 🎯 Objetivos del Proyecto
+* **Simplicidad Financiera/Matemática:** Ofrecer una solución directa para operaciones aritméticas sin fricciones.
+* **Diseño Limpio:** Mantener una estética minimalista para evitar distracciones visuales.
+* **Optimización:** Lograr tiempos de respuesta instantáneos en la gestión de estados y operaciones en tiempo real.
+
+---
+
+## ✨ Características Principales
+* **Operaciones Aritméticas Básicas:** Soporte completo para suma, resta, multiplicación y división.
+* **Gestión de Estados:** Control inmediato de la lógica de cálculo y visualización instantánea de resultados.
+* **Diseño Responsivo:** Interfaz adaptada al 100% para dispositivos móviles, tablets y ordenadores.
+* **Alta Precisión:** Manejo adecuado en el procesamiento de operaciones con números decimales.
+
+---
 
 ## 🛠️ Tecnologías Utilizadas
-Este proyecto fue construido utilizando herramientas modernas de desarrollo web:
 
-* **React:** Biblioteca de JavaScript para la construcción de interfaces de usuario dinámicas.
-* **Vite:** Herramienta de construcción de siguiente generación para un desarrollo rápido y ligero.
-* **Tailwind CSS:** Framework de CSS basado en utilidades para un diseño rápido y personalizado.
-* **Netlify:** Plataforma utilizada para el despliegue continuo y hosting de la aplicación.
+| Tecnología | Descripción | Uso en el Proyecto |
+| :--- | :--- | :--- |
+| **React** | Biblioteca de JavaScript | Manejo del estado de la calculadora y renderizado reactivo de la interfaz. |
+| **Vite** | Build Tool / Empaquetador | Configuración del entorno de desarrollo de alta velocidad y compilación. |
+| **Tailwind CSS**| Framework de CSS | Estilizado moderno y responsivo basado en clases de utilidad. |
+| **Netlify** | Plataforma Cloud | Hosting y automatización del despliegue continuo de la aplicación. |
 
-## 💻 Ejecución Local
+---
 
-Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
+## 💻 Ejecución en Entorno Local
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/Frangersal/my-calculator.git](https://github.com/Frangersal/my-calculator.git)
-    cd my-calculator
-    ```
+Sigue estos pasos para clonar el repositorio e iniciar la aplicación en tu máquina local:
 
-2.  **Instalar las dependencias:**
-    *(Requiere Node.js instalado)*
-    ```bash
-    npm install
-    ```
+### 📋 Requisitos Previos
+* **Node.js** (Versión LTS recomendada)
+* Gestor de paquetes **npm**
 
-3.  **Iniciar el servidor de desarrollo:**
-    ```bash
-    npm run dev
-    ```
+### 🔧 Pasos de Instalación
 
-4.  **Acceder a la aplicación:**
-    Abre tu navegador en la dirección que indique la terminal (ejemplo `http://localhost:5173`).
+1. **Clonar el repositorio:**
+git clone https://github.com/Frangersal/my-calculator.git
 
-## 📦 Construcción para Producción
-Si deseas generar los archivos optimizados para producción:
+2. **Navegar a la carpeta del proyecto:**
+cd my-calculator
 
-```bash
+3. **Instalar dependencias de Node:**
+npm install
+
+4. **Levantar el servidor de desarrollo:**
+npm run dev
+
+5. **Abrir la aplicación:**
+Introduce en tu navegador la dirección indicada por la terminal (normalmente http://localhost:5173).
+
+---
+
+## 📦 Despliegue y Construcción
+Para compilar la aplicación y generar los archivos listos para producción (`dist`):
+
 npm run build
+
+---
+<p align="center">
+  Desarrollado con ❤️ por <a href="https://github.com/Frangersal">Frangersal</a>
+</p>
